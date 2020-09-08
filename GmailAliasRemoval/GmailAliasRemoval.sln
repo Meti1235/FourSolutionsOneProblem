@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GmailAliasRemoval", "GmailAliasRemoval\GmailAliasRemoval.csproj", "{67003543-6018-4F14-8F40-F64F7B385FF7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67003543-6018-4F14-8F40-F64F7B385FF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67003543-6018-4F14-8F40-F64F7B385FF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67003543-6018-4F14-8F40-F64F7B385FF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67003543-6018-4F14-8F40-F64F7B385FF7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {808F200E-3594-4325-92D9-E352613258B5}
+	EndGlobalSection
+EndGlobal
