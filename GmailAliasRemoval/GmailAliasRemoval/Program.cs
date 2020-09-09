@@ -39,8 +39,8 @@ namespace GmailAliasRemoval
 
 
             //Solution 3
-
-            RemoveAlias("sakipi.mu+office@gmail");
+            string emailMethod = "sakipi.mu+office@gmail";
+            Console.WriteLine(RemoveAlias(emailMethod));
 
             //Solution 4
             //Dislamer: *This is not the type of code I would write normally*
@@ -90,6 +90,8 @@ namespace GmailAliasRemoval
             string realEmailNoFunc = realEmailFirstPart + realEmailSecondPart;
             Console.WriteLine(realEmailNoFunc);
 
+
+            Console.ReadLine();
             //Finding 4 different solutions to a problem I already solved helped me get a deeper understanding of how the code flows
             //It is a good excercise that I recommend
         }
