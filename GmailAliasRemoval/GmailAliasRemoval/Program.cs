@@ -5,8 +5,31 @@ namespace GmailAliasRemoval
 {
     class Program
     {
+       
+        //Solution 1
+        static string RegexAliasRemoval(string email)
+        {
+            
+            Regex regex = new Regex(@"[+].+[@]");
+            string output = regex.Replace(email, "@");
+           
+            return output;
+        }
+
+        //Solution 2
+        static string SplitFuncAliasRemoval(string email)
+        {
+
+            
+            char[] stringSeparators = { '+', '@' };
+            string[] emailArray = email.Split(stringSeparators, StringSplitOptions.None);
+            string output = emailArray[0] + "@" + emailArray[2];
+
+            return output;
+        }
+
         //Solution 3
-        static string RemoveAlias(string email)
+        static string BoolAliasRemoval (string email)
         {
             string output = "";
             bool shouldCopy = true;
@@ -19,35 +42,41 @@ namespace GmailAliasRemoval
             return output;
         }
 
+       
         static void Main(string[] args)
         {
 
+
+            string emailInput = "sakipi.mu+office@gmail";
+
             //Solution 1 
 
-            string emailRegex = "sakipi.mu+office@gmail";
-            Regex regex = new Regex(@"[+].+[@]");
-            string realRegexEmail = regex.Replace(emailRegex, "@");
-            Console.WriteLine(realRegexEmail);
+            Console.WriteLine(RegexAliasRemoval(emailInput));
 
             //Solution 2
 
-            string emailSplit = "sakipi.mu+office@gmail";
-            char[] stringSeparators = { '+', '@' };
-            string[] emailArray = emailSplit.Split(stringSeparators, StringSplitOptions.None);
-            string realSplitEmail = emailArray[0] + "@" + emailArray[2];
-            Console.WriteLine(realSplitEmail);
-
+            Console.WriteLine(SplitFuncAliasRemoval(emailInput));
 
             //Solution 3
 
-            string emailMethod = "sakipi.mu+office@gmail";
-            Console.WriteLine(RemoveAlias(emailMethod));
+            Console.WriteLine(BoolAliasRemoval(emailInput));
 
-            //Solution 4
-            //Dislamer: *This is not the type of code I would write normally*
+            //Bonus Solution 4
 
-            string emailNoFunc = "sakipi.mu+office@gmail";
-            char[] emailCharArray = emailNoFunc.ToCharArray();
+            Console.WriteLine(NoFuncAliasRemoval(emailInput));
+
+
+            Console.ReadLine();
+         
+        }
+
+
+        //Bonus Solution 4
+        //Dislamer: *This is not the type of code I would write normally. The challenge is to use no functions/methods*
+        static string NoFuncAliasRemoval(string email)
+        {
+
+            char[] emailCharArray = email.ToCharArray();
             int plusSign = 0;
 
             foreach (var emailChar in emailCharArray)
@@ -76,6 +105,7 @@ namespace GmailAliasRemoval
 
             for (int i = 0; i < plusSign; i++)
             {
+
                 Array.Resize(ref newEmailCharArrayPlusSign, i + 1);
                 newEmailCharArrayPlusSign[i] = emailCharArray[i];
             }
@@ -88,13 +118,9 @@ namespace GmailAliasRemoval
 
             string realEmailFirstPart = new string(newEmailCharArrayPlusSign);
             string realEmailSecondPart = new string(newEmailCharArrayAtSign);
-            string realEmailNoFunc = realEmailFirstPart + realEmailSecondPart;
-            Console.WriteLine(realEmailNoFunc);
+            string output = realEmailFirstPart + realEmailSecondPart;
 
-
-            Console.ReadLine();
-            //Finding 4 different solutions to a problem I already solved helped me get a deeper understanding of how the code flows
-            //It is a good excercise that I recommend
+            return output;
         }
     }
 }
