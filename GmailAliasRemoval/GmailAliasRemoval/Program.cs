@@ -27,7 +27,7 @@ namespace GmailAliasRemoval
             //Regex/Regular Expression(without knowing anything about Regex I managed to solved it in 50min in JS and then C#)
             // JS version: console.log( 'meti20+whatever@gmail.com'.replace(/[+].+[@]/g,'@'))
             // C# version:
-            string emailRegex = "meti20+whatever@gmail.com";
+            string emailRegex = "sakipi.mu+office@gmail";
             Regex regex = new Regex(@"[+].+[@]");
             string realRegexEmail = regex.Replace(emailRegex, "@");
 
@@ -35,7 +35,7 @@ namespace GmailAliasRemoval
 
             //Solution 2
             //This solution was the most fun (Split also accepts a String array the same way)
-            string emailSplit = "meti20+whatever@gmail.com";
+            string emailSplit = "sakipi.mu+office@gmail";
             char[] stringSeparators = { '+', '@' };
             string[] emailArray = emailSplit.Split(stringSeparators, StringSplitOptions.None);
             string realSplitEmail = emailArray[0] + "@" + emailArray[2];
@@ -48,7 +48,7 @@ namespace GmailAliasRemoval
             // The most prefered solution because it is the most scalable and clean.
             // I am creating and using a custom method.
             //C# Version:
-            RemoveAlias("meti20+whatever@gmail.com");
+            RemoveAlias("sakipi.mu+office@gmail");
 
             //JS Version:
             //           let email = "meti20+whatever@gmail.com"
@@ -75,7 +75,7 @@ namespace GmailAliasRemoval
 
             //Dislamer: *This is not the type of code I prefer*
 
-            string emailNoFunc = "meti20+whatever@gmail.com";
+            string emailNoFunc = "sakipi.mu+office@gmail";
             char[] emailCharArray = emailNoFunc.ToCharArray();
             int plusSign = 0;
             foreach (var emailChar in emailCharArray)
