@@ -39,6 +39,7 @@ namespace GmailAliasRemoval
 
 
             //Solution 3
+
             string emailMethod = "sakipi.mu+office@gmail";
             Console.WriteLine(RemoveAlias(emailMethod));
 
