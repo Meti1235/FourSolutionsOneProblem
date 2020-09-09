@@ -6,7 +6,7 @@
 
 #### Customers are using Gmails with append plus (“+”) sign to create multiple Gmails from one original Gmail.
 
-GMail logic example: sakipi.mu<strong>+office</strong>@gmail == sakipi.mu@gmail.com 
+GMail logic example: sakipi.mu<strong>+office</strong>@gmail == sakipi<em>.</em>mu@gmail.com 
 
 <br/>
 
